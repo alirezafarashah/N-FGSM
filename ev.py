@@ -17,7 +17,7 @@ parser.add_argument('--model-path', type=str, default='/kaggle/input/vit-n-fgsm/
 
 args = parser.parse_args()
 
-model_test = PreActResNet18(kernel_size=7, stride=2, padding=3, num_classes=args.num_classes).cuda()
+model_test = PreActResNet18(kernel_size=7, stride=2, padding=3, num_classes=200).cuda()
 
 model_test.load_state_dict(torch.load(args.model_path))
 model_test.float()
