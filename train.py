@@ -305,7 +305,9 @@ def main():
         test_loss, test_acc = attack_utils.evaluate_standard(test_loader, model_test)
 
         logger.info('Test Loss \t Test Acc \t PGD Loss \t PGD Acc')
+        print('Test Loss \t Test Acc \t PGD Loss \t PGD Acc')
         logger.info('%.4f \t \t %.4f \t %.4f \t %.4f', test_loss, test_acc, pgd_loss, pgd_acc)
+        print(test_loss, test_acc, pgd_loss, pgd_acc)
         print('Finished evaluating final model')
 
 
